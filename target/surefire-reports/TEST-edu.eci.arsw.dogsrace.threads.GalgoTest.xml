@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.eci.arsw.dogsrace.control.RaceControlTest" time="1.225" tests="12" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.eci.arsw.dogsrace.threads.GalgoTest" time="5.533" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -60,29 +60,46 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testMultiplePauseResume" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.028"/>
-  <testcase name="testAwaitIfPausedThreadSafety" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.26"/>
-  <testcase name="testAwaitIfPausedBlocksWhenPaused" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.11"/>
-  <testcase name="testPause" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.001"/>
-  <testcase name="testPauseStateConsistency" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.563">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at edu.eci.arsw.dogsrace.control.RaceControlTest.testPauseStateConsistency(RaceControlTest.java:250)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-]]></failure>
+  <testcase name="testHandlesInterruption" classname="edu.eci.arsw.dogsrace.threads.GalgoTest" time="1.273">
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\david\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
   </testcase>
-  <testcase name="testResumeWakesAllThreads" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.115"/>
-  <testcase name="testAwaitIfPausedDoesNotBlockWhenNotPaused" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.005"/>
-  <testcase name="testAwaitIfPausedHandlesInterruption" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.103"/>
-  <testcase name="testMultipleResumesKeepState" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.001"/>
-  <testcase name="testMultiplePausesKeepState" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.0"/>
-  <testcase name="testResume" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.0"/>
-  <testcase name="testInitialStateNotPaused" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.0"/>
+  <testcase name="testDisplayPasosUpdates" classname="edu.eci.arsw.dogsrace.threads.GalgoTest" time="0.343">
+    <system-out><![CDATA[El galgo TestDog llego en la posicion 1
+]]></system-out>
+  </testcase>
+  <testcase name="testThreadName" classname="edu.eci.arsw.dogsrace.threads.GalgoTest" time="0.002"/>
+  <testcase name="testFinishCalledOnlyAtEnd" classname="edu.eci.arsw.dogsrace.threads.GalgoTest" time="0.545">
+    <system-out><![CDATA[El galgo TestDog llego en la posicion 1
+]]></system-out>
+  </testcase>
+  <testcase name="testTimingBetweenSteps" classname="edu.eci.arsw.dogsrace.threads.GalgoTest" time="0.321">
+    <system-out><![CDATA[El galgo TestDog llego en la posicion 1
+]]></system-out>
+  </testcase>
+  <testcase name="testRegistersCorrectArrivalPosition" classname="edu.eci.arsw.dogsrace.threads.GalgoTest" time="0.326">
+    <system-out><![CDATA[El galgo Runner1 llego en la posicion 2
+]]></system-out>
+  </testcase>
+  <testcase name="testStepProgression" classname="edu.eci.arsw.dogsrace.threads.GalgoTest" time="0.539">
+    <system-out><![CDATA[El galgo TestDog llego en la posicion 1
+]]></system-out>
+  </testcase>
+  <testcase name="testCompleteRace" classname="edu.eci.arsw.dogsrace.threads.GalgoTest" time="1.085">
+    <system-out><![CDATA[El galgo TestDog llego en la posicion 1
+]]></system-out>
+  </testcase>
+  <testcase name="testMultipleGalgosRunIndependently" classname="edu.eci.arsw.dogsrace.threads.GalgoTest" time="0.543">
+    <system-out><![CDATA[El galgo Dog2 llego en la posicion 1
+El galgo Dog3 llego en la posicion 3
+El galgo Dog1 llego en la posicion 2
+]]></system-out>
+  </testcase>
+  <testcase name="testRespectsPauseControl" classname="edu.eci.arsw.dogsrace.threads.GalgoTest" time="0.543">
+    <system-out><![CDATA[El galgo TestDog llego en la posicion 1
+]]></system-out>
+  </testcase>
 </testsuite>

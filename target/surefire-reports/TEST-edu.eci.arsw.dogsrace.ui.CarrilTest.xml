@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.eci.arsw.dogsrace.control.RaceControlTest" time="1.225" tests="12" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.286" tests="18" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.class.path" value="D:\Users\david\Documentos\SeptimoSemestre\ARSW\Laboratorios\Lab_2_Concurrence-ARSW\target\test-classes;D:\Users\david\Documentos\SeptimoSemestre\ARSW\Laboratorios\Lab_2_Concurrence-ARSW\target\classes;C:\Users\david\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\david\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\david\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\david\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\david\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\david\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\david\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\david\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\david\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\david\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\david\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\david\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\david\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;"/>
+    <property name="sun.awt.enableExtraMouseButtons" value="true"/>
     <property name="java.vm.vendor" value="Microsoft"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -60,29 +61,35 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testMultiplePauseResume" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.028"/>
-  <testcase name="testAwaitIfPausedThreadSafety" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.26"/>
-  <testcase name="testAwaitIfPausedBlocksWhenPaused" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.11"/>
-  <testcase name="testPause" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.001"/>
-  <testcase name="testPauseStateConsistency" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.563">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+  <testcase name="testFinishOverridesDisplayPasos" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.243"/>
+  <testcase name="testTogglePasoMultipleTimes" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.002"/>
+  <testcase name="testMinimalCarril" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.002"/>
+  <testcase name="testNamePreservedAfterRestart" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.002"/>
+  <testcase name="testDisplayPasos" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.002"/>
+  <testcase name="testMultiplePasoUpdates" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.002"/>
+  <testcase name="testPasosInitialization" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.002"/>
+  <testcase name="testGetName" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.002"/>
+  <testcase name="testCarrilSize" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.001"/>
+  <testcase name="testRapidDisplayPasosUpdates" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.002"/>
+  <testcase name="testDifferentSizes" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.004"/>
+  <testcase name="testGetPasoAtIndex" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.004"/>
+  <testcase name="testReStart" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.003">
+    <failure message="expected: &lt;&gt; but was: &lt;o&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <> but was: <o>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at edu.eci.arsw.dogsrace.control.RaceControlTest.testPauseStateConsistency(RaceControlTest.java:250)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at edu.eci.arsw.dogsrace.ui.CarrilTest.testReStart(CarrilTest.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></failure>
   </testcase>
-  <testcase name="testResumeWakesAllThreads" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.115"/>
-  <testcase name="testAwaitIfPausedDoesNotBlockWhenNotPaused" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.005"/>
-  <testcase name="testAwaitIfPausedHandlesInterruption" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.103"/>
-  <testcase name="testMultipleResumesKeepState" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.001"/>
-  <testcase name="testMultiplePausesKeepState" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.0"/>
-  <testcase name="testResume" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.0"/>
-  <testcase name="testInitialStateNotPaused" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.0"/>
+  <testcase name="testLlegadaInitialization" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.002"/>
+  <testcase name="testSetPasoOn" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.002"/>
+  <testcase name="testFinish" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.001"/>
+  <testcase name="testSetPasoOff" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.001"/>
+  <testcase name="testSimulatedRace" classname="edu.eci.arsw.dogsrace.ui.CarrilTest" time="0.002"/>
 </testsuite>
