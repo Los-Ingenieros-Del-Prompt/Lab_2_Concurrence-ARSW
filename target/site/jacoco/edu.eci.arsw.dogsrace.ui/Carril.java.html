@@ -58,7 +58,7 @@ public class Carril {
 	}
 
 	public String getName() {
-<span class="fc" id="L61">		return llegada.getText();</span>
+<span class="nc" id="L61">		return llegada.getText();</span>
 	}
 
 	/**
@@ -68,7 +68,7 @@ public class Carril {
 	 * @return
 	 */
 	public JButton getPaso(int i) {
-<span class="fc" id="L71">		return paso[i];</span>
+<span class="nc" id="L71">		return paso[i];</span>
 	}
 
 	/**
@@ -77,7 +77,7 @@ public class Carril {
 	 * @return
 	 */
 	public JButton getLlegada() {
-<span class="fc" id="L80">		return llegada;</span>
+<span class="nc" id="L80">		return llegada;</span>
 	}
 
 	/**
@@ -95,8 +95,8 @@ public class Carril {
 	 * @param i
 	 */
 	public void setPasoOff(int i) {
-<span class="fc" id="L98">		paso[i].setText(&quot;&quot;);</span>
-<span class="fc" id="L99">	}</span>
+<span class="nc" id="L98">		paso[i].setText(&quot;&quot;);</span>
+<span class="nc" id="L99">	}</span>
 
 	/**
 	 * Indica que se ha llegado al final del carril
@@ -113,11 +113,11 @@ public class Carril {
 	 * Reinicia el carril: ningun paso se ha usado, la bandera abajo.
 	 */
 	public void reStart() {
-<span class="fc bfc" id="L116" title="All 2 branches covered.">		for (int k = 0; k &lt; paso.length; k++) {</span>
-<span class="fc" id="L117">			paso[k].setBackground(off);</span>
+<span class="nc bnc" id="L116" title="All 2 branches missed.">		for (int k = 0; k &lt; paso.length; k++) {</span>
+<span class="nc" id="L117">			paso[k].setBackground(off);</span>
 		}
-<span class="fc" id="L119">		llegada.setBackground(start);</span>
-<span class="fc" id="L120">		llegada.setText(name);</span>
-<span class="fc" id="L121">	}</span>
+<span class="nc" id="L119">		llegada.setBackground(start);</span>
+<span class="nc" id="L120">		llegada.setText(name);</span>
+<span class="nc" id="L121">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
