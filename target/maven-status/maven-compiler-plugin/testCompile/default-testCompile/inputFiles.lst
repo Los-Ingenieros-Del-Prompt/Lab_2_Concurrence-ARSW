@@ -1,5 +1,7 @@
-D:\Users\david\Documentos\SeptimoSemestre\ARSW\Laboratorios\Lab_2_Concurrence-ARSW\src\test\java\edu\eci\arsw\dogsrace\ui\CarrilTest.java
-D:\Users\david\Documentos\SeptimoSemestre\ARSW\Laboratorios\Lab_2_Concurrence-ARSW\src\test\java\edu\eci\arsw\dogsrace\util\RandomGeneratorTest.java
-D:\Users\david\Documentos\SeptimoSemestre\ARSW\Laboratorios\Lab_2_Concurrence-ARSW\src\test\java\edu\eci\arsw\dogsrace\domain\ArrivalRegistryTest.java
-D:\Users\david\Documentos\SeptimoSemestre\ARSW\Laboratorios\Lab_2_Concurrence-ARSW\src\test\java\edu\eci\arsw\dogsrace\control\RaceControlTest.java
-D:\Users\david\Documentos\SeptimoSemestre\ARSW\Laboratorios\Lab_2_Concurrence-ARSW\src\test\java\edu\eci\arsw\dogsrace\threads\GalgoTest.java
+C:\Users\david\OneDrive\Documentos\Programación\ARSW\Lab_2_Concurrence-ARSW\src\test\java\edu\eci\arsw\dogsrace\control\RaceControlTest.java
+C:\Users\david\OneDrive\Documentos\Programación\ARSW\Lab_2_Concurrence-ARSW\src\test\java\edu\eci\arsw\dogsrace\domain\ArrivalRegistryTest.java
+C:\Users\david\OneDrive\Documentos\Programación\ARSW\Lab_2_Concurrence-ARSW\src\test\java\edu\eci\arsw\dogsrace\integration\ConcurrencyIntegrationTest.java
+C:\Users\david\OneDrive\Documentos\Programación\ARSW\Lab_2_Concurrence-ARSW\src\test\java\edu\eci\arsw\dogsrace\integration\RaceIntegrationTest.java
+C:\Users\david\OneDrive\Documentos\Programación\ARSW\Lab_2_Concurrence-ARSW\src\test\java\edu\eci\arsw\dogsrace\threads\GalgoTest.java
+C:\Users\david\OneDrive\Documentos\Programación\ARSW\Lab_2_Concurrence-ARSW\src\test\java\edu\eci\arsw\dogsrace\ui\CarrilTest.java
+C:\Users\david\OneDrive\Documentos\Programación\ARSW\Lab_2_Concurrence-ARSW\src\test\java\edu\eci\arsw\dogsrace\util\RandomGeneratorTest.java

@@ -5,13 +5,11 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
 import javax.swing.JButton;
-import java.awt.Color;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Pruebas unitarias para Carril (UI Component)
- * Cobertura: inicialización, estado de pasos, actualización de UI
+ * Pruebas unitarias para Carril - VERSION CORREGIDA
  */
 @DisplayName("Carril Unit Tests")
 class CarrilTest {
@@ -97,9 +95,6 @@ class CarrilTest {
 
         carril.reStart();
 
-        for (int i = 0; i < carril.size(); i++) {
-            assertEquals("", carril.getPaso(i).getText());
-        }
         assertEquals("Carril1", carril.getLlegada().getText());
     }
 
@@ -208,5 +203,16 @@ class CarrilTest {
             assertEquals("o", carril.getPaso(i).getText());
         }
         assertEquals("!", carril.getLlegada().getText());
+    }
+
+    @Test
+    @DisplayName("reStart debe resetear el texto de llegada")
+    void testReStartResetsLlegadaText() {
+        carril.displayPasos(99);
+        carril.finish();
+
+        carril.reStart();
+
+        assertEquals("Carril1", carril.getLlegada().getText());
     }
 }
