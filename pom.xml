@@ -1,6 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>edu.eci.arsw</groupId>
@@ -11,21 +12,45 @@
   <properties>
     <maven.compiler.release>21</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!-- Versions -->
     <junit.version>5.10.2</junit.version>
+    <mockito.version>5.11.0</mockito.version>
     <jacoco.version>0.8.12</jacoco.version>
   </properties>
 
   <dependencies>
+
+    <!-- JUnit 5 -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- Mockito Core -->
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>${mockito.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Mockito + JUnit 5 integration -->
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-junit-jupiter</artifactId>
+      <version>${mockito.version}</version>
+      <scope>test</scope>
+    </dependency>
+
   </dependencies>
 
   <build>
     <plugins>
+
+      <!-- JUnit 5 runner -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -35,49 +60,72 @@
         </configuration>
       </plugin>
 
+      <!-- Code coverage -->
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
         <version>${jacoco.version}</version>
         <executions>
+
           <execution>
             <id>prepare-agent</id>
-            <goals><goal>prepare-agent</goal></goals>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
           </execution>
+
           <execution>
             <id>report</id>
             <phase>test</phase>
-            <goals><goal>report</goal></goals>
+            <goals>
+              <goal>report</goal>
+            </goals>
           </execution>
+
           <execution>
             <id>check</id>
-            <goals><goal>check</goal></goals>
+            <goals>
+              <goal>check</goal>
+            </goals>
             <configuration>
               <rules>
                 <rule>
                   <element>BUNDLE</element>
                   <limits>
+                    <!-- Objetivo de cobertura: 85% de instrucciones -->
                     <limit>
                       <counter>INSTRUCTION</counter>
                       <value>COVEREDRATIO</value>
-                      <minimum>0.70</minimum>
+                      <minimum>0.85</minimum>
+                    </limit>
+                    <!-- Objetivo de cobertura: 75% de ramas -->
+                    <limit>
+                      <counter>BRANCH</counter>
+                      <value>COVEREDRATIO</value>
+                      <minimum>0.75</minimum>
                     </limit>
                   </limits>
                 </rule>
               </rules>
               <excludes>
-                <!-- UI classes are hard to unit test in this lab -->
+                <!-- Excluir clases de UI (difíciles de probar) -->
                 <exclude>**/ui/**</exclude>
+                <!-- Excluir clase principal con GUI -->
+                <exclude>**/app/**</exclude>
               </excludes>
             </configuration>
           </execution>
+
         </executions>
       </plugin>
+
+      <!-- Run main classes -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.4.1</version>
       </plugin>
+
     </plugins>
   </build>
 

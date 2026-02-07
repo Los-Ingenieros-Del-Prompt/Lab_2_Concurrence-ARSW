@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Carril.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Dogs Race (Java 21)</a> &gt; <a href="index.source.html" class="el_package">edu.eci.arsw.dogsrace.ui</a> &gt; <span class="el_source">Carril.java</span></div><h1>Carril.java</h1><pre class="source lang-java linenums">package edu.eci.arsw.dogsrace.ui;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Carril.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Dogs Race (Java 21)</a> &gt; <a href="index.source.html" class="el_package">edu.eci.arsw.dogsrace.ui</a> &gt; <span class="el_source">Carril.java</span></div><h1>Carril.java</h1><pre class="source lang-java linenums">package edu.eci.arsw.dogsrace.ui;
 
 import java.awt.Color;
 
@@ -11,10 +11,10 @@ import javax.swing.JButton;
  * 
  */
 public class Carril {
-<span class="nc" id="L14">	private Color on = Color.CYAN;</span>
-<span class="nc" id="L15">	private Color off = Color.LIGHT_GRAY;</span>
-<span class="nc" id="L16">	private Color stop = Color.red;</span>
-<span class="nc" id="L17">	private Color start = Color.GREEN;</span>
+<span class="fc" id="L14">	private Color on = Color.CYAN;</span>
+<span class="fc" id="L15">	private Color off = Color.LIGHT_GRAY;</span>
+<span class="fc" id="L16">	private Color stop = Color.red;</span>
+<span class="fc" id="L17">	private Color start = Color.GREEN;</span>
 	/**
 	 * Pasos del carril
 	 */
@@ -35,18 +35,18 @@ public class Carril {
 	 * @param name
 	 *            Nombre del carril
 	 */
-<span class="nc" id="L38">	public Carril(int nPasos, String name) {</span>
-<span class="nc" id="L39">		paso = new JButton[nPasos];</span>
+<span class="fc" id="L38">	public Carril(int nPasos, String name) {</span>
+<span class="fc" id="L39">		paso = new JButton[nPasos];</span>
 		JButton bTmp;
-<span class="nc bnc" id="L41" title="All 2 branches missed.">		for (int k = 0; k &lt; nPasos; k++) {</span>
-<span class="nc" id="L42">			bTmp = new JButton();</span>
-<span class="nc" id="L43">			bTmp.setBackground(off);</span>
-<span class="nc" id="L44">			paso[k] = bTmp;</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">		for (int k = 0; k &lt; nPasos; k++) {</span>
+<span class="fc" id="L42">			bTmp = new JButton();</span>
+<span class="fc" id="L43">			bTmp.setBackground(off);</span>
+<span class="fc" id="L44">			paso[k] = bTmp;</span>
 		}
-<span class="nc" id="L46">		llegada = new JButton(name);</span>
-<span class="nc" id="L47">		llegada.setBackground(start);</span>
-<span class="nc" id="L48">		this.name = name;</span>
-<span class="nc" id="L49">	}</span>
+<span class="fc" id="L46">		llegada = new JButton(name);</span>
+<span class="fc" id="L47">		llegada.setBackground(start);</span>
+<span class="fc" id="L48">		this.name = name;</span>
+<span class="fc" id="L49">	}</span>
 
 	/**
 	 * Tama��o del carril en numero de pasos
@@ -54,7 +54,7 @@ public class Carril {
 	 * @return
 	 */
 	public int size() {
-<span class="nc" id="L57">		return paso.length;</span>
+<span class="fc" id="L57">		return paso.length;</span>
 	}
 
 	public String getName() {
@@ -86,8 +86,8 @@ public class Carril {
 	 * @param i
 	 */
 	public void setPasoOn(int i) {
-<span class="nc" id="L89">		paso[i].setText(&quot;o&quot;);</span>
-<span class="nc" id="L90">	}</span>
+<span class="fc" id="L89">		paso[i].setText(&quot;o&quot;);</span>
+<span class="fc" id="L90">	}</span>
 
 	/**
 	 * Indica que el paso i no ha sido utilizado
@@ -102,12 +102,12 @@ public class Carril {
 	 * Indica que se ha llegado al final del carril
 	 */
 	public void finish() {
-<span class="nc" id="L105">		llegada.setText(&quot;!&quot;);</span>
-<span class="nc" id="L106">	}</span>
+<span class="fc" id="L105">		llegada.setText(&quot;!&quot;);</span>
+<span class="fc" id="L106">	}</span>
 
 	public void displayPasos(int n) {
-<span class="nc" id="L109">		llegada.setText(&quot;&quot; + n);</span>
-<span class="nc" id="L110">	}</span>
+<span class="fc" id="L109">		llegada.setText(&quot;&quot; + n);</span>
+<span class="fc" id="L110">	}</span>
 
 	/**
 	 * Reinicia el carril: ningun paso se ha usado, la bandera abajo.

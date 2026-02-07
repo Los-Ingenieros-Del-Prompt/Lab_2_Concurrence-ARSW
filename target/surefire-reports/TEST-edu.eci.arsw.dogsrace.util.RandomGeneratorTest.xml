@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.eci.arsw.dogsrace.control.RaceControlTest" time="1.26" tests="12" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.052" tests="20" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.class.path" value="D:\Users\david\Documentos\SeptimoSemestre\ARSW\Laboratorios\Lab_2_Concurrence-ARSW\target\test-classes;D:\Users\david\Documentos\SeptimoSemestre\ARSW\Laboratorios\Lab_2_Concurrence-ARSW\target\classes;C:\Users\david\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\david\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\david\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\david\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\david\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\david\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\david\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\david\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\david\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\david\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\david\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\david\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\david\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;"/>
+    <property name="sun.awt.enableExtraMouseButtons" value="true"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -58,16 +59,24 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testMultiplePauseResume" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.032"/>
-  <testcase name="testAwaitIfPausedThreadSafety" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.277"/>
-  <testcase name="testAwaitIfPausedBlocksWhenPaused" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.112"/>
-  <testcase name="testPause" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.0"/>
-  <testcase name="testPauseStateConsistency" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.587"/>
-  <testcase name="testResumeWakesAllThreads" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.105"/>
-  <testcase name="testAwaitIfPausedDoesNotBlockWhenNotPaused" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.005"/>
-  <testcase name="testAwaitIfPausedHandlesInterruption" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.102"/>
-  <testcase name="testMultipleResumesKeepState" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.001"/>
-  <testcase name="testMultiplePausesKeepState" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.001"/>
-  <testcase name="testResume" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.0"/>
-  <testcase name="testInitialStateNotPaused" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.0"/>
+  <testcase name="testBoundOne" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.002"/>
+  <testcase name="testDoesNotGenerateBound" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.001"/>
+  <testcase name="testNumbersWithinBound" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.001"/>
+  <testcase name="testUniformDistribution" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.01"/>
+  <testcase name="testDifferentBounds" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.001"/>
+  <testcase name="testVariety" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.001"/>
+  <testcase name="testMultipleCallsProduceDifferentResults" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.001"/>
+  <testcase name="testConsistentRange" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.002"/>
+  <testcase name="testConsistentRange" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.001"/>
+  <testcase name="testConsistentRange" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.0"/>
+  <testcase name="testConsistentRange" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.0"/>
+  <testcase name="testConsistentRange" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.0"/>
+  <testcase name="testConsistentRange" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.0"/>
+  <testcase name="testConsistentRange" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.0"/>
+  <testcase name="testConsistentRange" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.0"/>
+  <testcase name="testConsistentRange" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.0"/>
+  <testcase name="testConsistentRange" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.001"/>
+  <testcase name="testThreadSafety" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.003"/>
+  <testcase name="testNoNegativeNumbers" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.001"/>
+  <testcase name="testLargeBound" classname="edu.eci.arsw.dogsrace.util.RandomGeneratorTest" time="0.001"/>
 </testsuite>

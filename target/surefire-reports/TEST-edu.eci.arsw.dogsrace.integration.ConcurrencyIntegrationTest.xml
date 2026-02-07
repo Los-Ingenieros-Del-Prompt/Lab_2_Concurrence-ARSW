@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.eci.arsw.dogsrace.control.RaceControlTest" time="1.26" tests="12" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.eci.arsw.dogsrace.integration.ConcurrencyIntegrationTest" time="12.524" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.class.path" value="D:\Users\david\Documentos\SeptimoSemestre\ARSW\Laboratorios\Lab_2_Concurrence-ARSW\target\test-classes;D:\Users\david\Documentos\SeptimoSemestre\ARSW\Laboratorios\Lab_2_Concurrence-ARSW\target\classes;C:\Users\david\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\david\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\david\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\david\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\david\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\david\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\david\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\david\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\david\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\david\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\david\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\david\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\david\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;"/>
+    <property name="sun.awt.enableExtraMouseButtons" value="true"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -58,16 +59,66 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testMultiplePauseResume" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.032"/>
-  <testcase name="testAwaitIfPausedThreadSafety" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.277"/>
-  <testcase name="testAwaitIfPausedBlocksWhenPaused" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.112"/>
-  <testcase name="testPause" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.0"/>
-  <testcase name="testPauseStateConsistency" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.587"/>
-  <testcase name="testResumeWakesAllThreads" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.105"/>
-  <testcase name="testAwaitIfPausedDoesNotBlockWhenNotPaused" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.005"/>
-  <testcase name="testAwaitIfPausedHandlesInterruption" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.102"/>
-  <testcase name="testMultipleResumesKeepState" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.001"/>
-  <testcase name="testMultiplePausesKeepState" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.001"/>
-  <testcase name="testResume" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.0"/>
-  <testcase name="testInitialStateNotPaused" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.0"/>
+  <testcase name="testPauseResumeUnderLoad" classname="edu.eci.arsw.dogsrace.integration.ConcurrencyIntegrationTest" time="3.531">
+    <system-out><![CDATA[El galgo Dog6 llego en la posicion 1
+El galgo Dog7 llego en la posicion 6
+El galgo Dog5 llego en la posicion 5
+El galgo Dog1 llego en la posicion 3
+El galgo Dog8 llego en la posicion 4
+El galgo Dog4 llego en la posicion 7
+El galgo Dog0 llego en la posicion 2
+El galgo Dog3 llego en la posicion 8
+El galgo Dog9 llego en la posicion 10
+El galgo Dog2 llego en la posicion 9
+]]></system-out>
+  </testcase>
+  <testcase name="testMixedSpeedRunners" classname="edu.eci.arsw.dogsrace.integration.ConcurrencyIntegrationTest" time="3.278">
+    <system-out><![CDATA[El galgo Fast llego en la posicion 1
+El galgo Medium llego en la posicion 2
+El galgo Slow llego en la posicion 3
+El galgo VerySlow llego en la posicion 4
+]]></system-out>
+  </testcase>
+  <testcase name="testRapidPauseResumeCycles" classname="edu.eci.arsw.dogsrace.integration.ConcurrencyIntegrationTest" time="2.398">
+    <system-out><![CDATA[El galgo Dog2 llego en la posicion 1
+El galgo Dog3 llego en la posicion 2
+El galgo Dog1 llego en la posicion 3
+El galgo Dog0 llego en la posicion 4
+El galgo Dog4 llego en la posicion 5
+]]></system-out>
+  </testcase>
+  <testcase name="testNoRaceConditionInArrivalRegistry" classname="edu.eci.arsw.dogsrace.integration.ConcurrencyIntegrationTest" time="0.006"/>
+  <testcase name="testHighConcurrency" classname="edu.eci.arsw.dogsrace.integration.ConcurrencyIntegrationTest" time="1.641">
+    <system-out><![CDATA[El galgo Dog16 llego en la posicion 1
+El galgo Dog2 llego en la posicion 2
+El galgo Dog19 llego en la posicion 12
+El galgo Dog0 llego en la posicion 11
+El galgo Dog18 llego en la posicion 10
+El galgo Dog6 llego en la posicion 9
+El galgo Dog13 llego en la posicion 8
+El galgo Dog14 llego en la posicion 7
+El galgo Dog3 llego en la posicion 4
+El galgo Dog5 llego en la posicion 5
+El galgo Dog12 llego en la posicion 6
+El galgo Dog4 llego en la posicion 3
+El galgo Dog15 llego en la posicion 13
+El galgo Dog11 llego en la posicion 20
+El galgo Dog9 llego en la posicion 19
+El galgo Dog8 llego en la posicion 18
+El galgo Dog10 llego en la posicion 17
+El galgo Dog17 llego en la posicion 14
+El galgo Dog1 llego en la posicion 16
+El galgo Dog7 llego en la posicion 15
+]]></system-out>
+  </testcase>
+  <testcase name="testAtomicPositionAssignment" classname="edu.eci.arsw.dogsrace.integration.ConcurrencyIntegrationTest" time="0.005"/>
+  <testcase name="testNoDeadlock" classname="edu.eci.arsw.dogsrace.integration.ConcurrencyIntegrationTest" time="0.135"/>
+  <testcase name="testInterruptionDuringPause" classname="edu.eci.arsw.dogsrace.integration.ConcurrencyIntegrationTest" time="0.216"/>
+  <testcase name="testRaceControlConsistency" classname="edu.eci.arsw.dogsrace.integration.ConcurrencyIntegrationTest" time="0.209"/>
+  <testcase name="testSystemRecoveryFromThreadExceptions" classname="edu.eci.arsw.dogsrace.integration.ConcurrencyIntegrationTest" time="1.097">
+    <system-out><![CDATA[El galgo Dog0 llego en la posicion 1
+El galgo Dog4 llego en la posicion 3
+El galgo Dog2 llego en la posicion 2
+]]></system-out>
+  </testcase>
 </testsuite>
