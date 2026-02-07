@@ -80,6 +80,14 @@
             <goals>
               <goal>report</goal>
             </goals>
+            <configuration>
+              <excludes>
+                <!-- Excluir clases de UI (difíciles de probar) -->
+                <exclude>**/ui/**</exclude>
+                <!-- Excluir clase principal con GUI -->
+                <exclude>**/app/**</exclude>
+              </excludes>
+            </configuration>
           </execution>
 
           <execution>

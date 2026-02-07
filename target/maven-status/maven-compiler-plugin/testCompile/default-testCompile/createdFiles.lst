@@ -1,6 +1,6 @@
-edu\eci\arsw\dogsrace\control\RaceControlTest.class
-edu\eci\arsw\dogsrace\domain\ArrivalRegistryTest.class
-edu\eci\arsw\dogsrace\integration\ConcurrencyIntegrationTest.class
-edu\eci\arsw\dogsrace\util\RandomGeneratorTest.class
-edu\eci\arsw\dogsrace\integration\RaceIntegrationTest.class
-edu\eci\arsw\dogsrace\threads\GalgoTest.class
+edu/eci/arsw/dogsrace/integration/ConcurrencyIntegrationTest.class
+edu/eci/arsw/dogsrace/domain/ArrivalRegistryTest.class
+edu/eci/arsw/dogsrace/threads/GalgoTest.class
+edu/eci/arsw/dogsrace/control/RaceControlTest.class
+edu/eci/arsw/dogsrace/integration/RaceIntegrationTest.class
+edu/eci/arsw/dogsrace/util/RandomGeneratorTest.class
