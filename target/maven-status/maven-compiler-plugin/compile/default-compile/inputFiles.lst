@@ -1,0 +1,7 @@
+/home/juan/Documents/Projects/Lab_2_Concurrence-ARSW/src/main/java/edu/eci/arsw/dogsrace/app/MainCanodromo.java
+/home/juan/Documents/Projects/Lab_2_Concurrence-ARSW/src/main/java/edu/eci/arsw/dogsrace/control/RaceControl.java
+/home/juan/Documents/Projects/Lab_2_Concurrence-ARSW/src/main/java/edu/eci/arsw/dogsrace/domain/ArrivalRegistry.java
+/home/juan/Documents/Projects/Lab_2_Concurrence-ARSW/src/main/java/edu/eci/arsw/dogsrace/threads/Galgo.java
+/home/juan/Documents/Projects/Lab_2_Concurrence-ARSW/src/main/java/edu/eci/arsw/dogsrace/ui/Canodromo.java
+/home/juan/Documents/Projects/Lab_2_Concurrence-ARSW/src/main/java/edu/eci/arsw/dogsrace/ui/Carril.java
+/home/juan/Documents/Projects/Lab_2_Concurrence-ARSW/src/main/java/edu/eci/arsw/dogsrace/util/RandomGenerator.java
